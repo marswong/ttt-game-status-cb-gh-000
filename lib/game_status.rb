@@ -34,7 +34,7 @@ def won?(board)
 end
 
 def full?(board)
-  return board.all? { |x| position_taken?(x) }
+  return board.all? { |x| position_taken?(board, x) }
 end
 
 def draw?(board)
