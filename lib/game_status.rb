@@ -22,9 +22,13 @@ def won?(board)
     return false
   else
     WIN_COMBINATIONS.each do |x|
-      if board.include?(x)      
+      if board.include?(x)
         return x
       end
     end
   end
+end
+
+def full?
+  
 end
