@@ -3,6 +3,10 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+def include_array?(board, comb)
+  return board[comb[0]] == board[comb[1]] && board[comb[1]] == board[comb[2]]
+end
+
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0, 1, 2],
