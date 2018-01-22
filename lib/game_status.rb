@@ -22,12 +22,12 @@ WIN_COMBINATIONS = [
 def won?(board)
   if board.all? { |x| x == " " }
     return false
-  elsif WIN_COMBINATIONS.all? { |x| !board.include?(x) }
+  elsif WIN_COMBINATIONS.none? { |comb| include_array?(board, comb) }
     return false
   else
-    WIN_COMBINATIONS.each do |x|
-      if board.include?(x)
-        return x
+    WIN_COMBINATIONS.each do |comb|
+      if include_array?(board, comb)
+        return comb
       end
     end
   end
