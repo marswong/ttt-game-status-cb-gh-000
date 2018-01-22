@@ -29,6 +29,6 @@ def won?(board)
   end
 end
 
-def full?
-  
+def full?(board)
+  return board.none? { |x| x != " " }
 end
