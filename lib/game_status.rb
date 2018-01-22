@@ -30,7 +30,7 @@ def won?(board)
 end
 
 def full?(board)
-  return board.none? { |x| x == " " }
+  return board.all? { |x| position_taken?(x) }
 end
 
 def draw?(board)
