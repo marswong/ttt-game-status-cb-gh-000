@@ -38,17 +38,17 @@ def full?(board)
 end
 
 def draw?(board)
-  return WIN_COMBINATIONS.none? { |comb| include_array?(board, comb) }
+  return full?(board) && WIN_COMBINATIONS.none? { |comb| include_array?(board, comb) }
 end
 
 def over?(board)
-  return won?(board) || draw?(board) || full?(board)
+  return won?(board) || draw?(board)
 end
 
 def winner(board)
   if won?(board)
     return board[won?(board)[0]]
   else
-    return nil
+    return nil 
   end
 end
