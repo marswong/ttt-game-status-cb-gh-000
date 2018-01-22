@@ -34,5 +34,5 @@ def full?(board)
 end
 
 def draw?(board)
-  
+  return WIN_COMBINATIONS.none? { |x| board.include?(x) }
 end
