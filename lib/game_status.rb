@@ -18,5 +18,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   if board.all? { |x| x == " " }
     return false
+  elsif WIN_COMBINATIONS.all? { |x| !board.include?(x) }
+    return false
   end
 end
