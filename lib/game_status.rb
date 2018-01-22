@@ -38,7 +38,7 @@ def full?(board)
 end
 
 def draw?(board)
-  return WIN_COMBINATIONS.none? { |x| board.include?(x) }
+  return WIN_COMBINATIONS.none? { |comb| include_array?(board, comb) }
 end
 
 def over?(board)
