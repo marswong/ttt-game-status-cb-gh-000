@@ -20,5 +20,11 @@ def won?(board)
     return false
   elsif WIN_COMBINATIONS.all? { |x| !board.include?(x) }
     return false
+  else
+    WIN_COMBINATIONS.each do |x|
+      if board.include?(x)      
+        return x
+      end
+    end
   end
 end
