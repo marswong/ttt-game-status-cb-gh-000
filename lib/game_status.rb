@@ -16,5 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  return board.all? { |x| x == " " }
+  if board.all? { |x| x == " " }
+    return false
+  end
 end
