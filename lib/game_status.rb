@@ -32,3 +32,7 @@ end
 def full?(board)
   return board.none? { |x| x == " " }
 end
+
+def draw?(board)
+  
+end
